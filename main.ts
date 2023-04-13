@@ -5,8 +5,14 @@ namespace SpriteKind {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
 	
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`transparency16`, function (sprite, location) {
+	
+})
 function RandomTrees (list: any[]) {
-    tiles.placeOnRandomTile(treeslist._pickRandom(), sprites.castle.tilePath4)
+    for (let index = 0; index < 10; index++) {
+        tiles.placeOnRandomTile(treeslist._pickRandom(), sprites.castle.tileGrass2)
+        tiles.placeOnRandomTile(treeslist._pickRandom(), sprites.castle.tileGrass3)
+    }
 }
 let treeslist: Sprite[] = []
 tiles.setCurrentTilemap(tilemap`level1`)
@@ -132,6 +138,13 @@ let HouseSprite = [sprites.create(img`
     `, SpriteKind.House)]
 tiles.placeOnRandomTile(HouseSprite[0], sprites.builtin.crowd0)
 tiles.placeOnRandomTile(HouseSprite[1], sprites.builtin.crowd4)
+// Introduction text to start the game
+game.showLongText("Welcome! It's nice to meet you.", DialogLayout.Bottom)
+game.showLongText("I'm the red riding hood.", DialogLayout.Bottom)
+game.showLongText("Let's get to know each other!", DialogLayout.Bottom)
+let name = game.askForString("What's your name?", 7)
+game.showLongText("Hi " + name + "!", DialogLayout.Bottom)
+game.showLongText("" + name + ", " + "let's visit my grandma's house!", DialogLayout.Bottom)
 treeslist = [
 sprites.create(img`
     ....................
@@ -255,3 +268,11 @@ sprites.create(img`
     ....................
     `, SpriteKind.Player)
 ]
+forever(function () {
+    for (let index = 0; index < 2; index++) {
+        music.play(music.stringPlayable("B A - B C5 G A G ", 120), music.PlaybackMode.UntilDone)
+    }
+    for (let index = 0; index < 2; index++) {
+        music.play(music.stringPlayable("E F - F G F G F ", 120), music.PlaybackMode.UntilDone)
+    }
+})
