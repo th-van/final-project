@@ -81,6 +81,8 @@ sprites.onOverlap(SpriteKind.RedHood, SpriteKind.GrandmaHood, function (sprite, 
     )
     RedRidingHood.sayText("Hi grandma!", 1000, true)
     pause(2000)
+    Grandma.sayText("Hi dear", 1000, true)
+    pause(2000)
     Grandma.sayText("Can you pick up some blueberries today? ", 2000, true)
     pause(2000)
     RedRidingHood.sayText("Yes grandma, I can", 1000, true)
