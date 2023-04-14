@@ -5,6 +5,9 @@ namespace SpriteKind {
     export const GrandmaHood = SpriteKind.create()
     export const BasketHood = SpriteKind.create()
 }
+scene.onOverlapTile(SpriteKind.RedHood, assets.tile`transparency16`, function (sprite, location) {
+	
+})
 sprites.onOverlap(SpriteKind.RedHood, SpriteKind.GrandmaHood, function (sprite, otherSprite) {
     animation.runImageAnimation(
     RedRidingHood,
