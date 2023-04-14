@@ -192,9 +192,9 @@ sprites.onOverlap(SpriteKind.RedHood, SpriteKind.BasketHood, function (sprite, o
         . . f f f 4 d d d d f . . . 
         . . 4 d d e 4 4 4 e f . . . 
         . . e d d e 3 3 3 3 f . . . 
-        . . f e e f 6 6 6 6 f f . . 
-        . . f f f f f f f f f f . . 
-        . . . f f . . . f f f . . . 
+        . . e e e e e 6 6 6 f f . . 
+        . . e f f f e f f f f f . . 
+        . . e e e e e . f f f . . . 
         `,img`
         . . . . . . . . . . . . . . 
         . f f f . f f f f f . . . . 
@@ -207,28 +207,28 @@ sprites.onOverlap(SpriteKind.RedHood, SpriteKind.BasketHood, function (sprite, o
         . f f 4 4 f b f 4 4 f f f . 
         . . f 4 d 4 1 f d d f f . . 
         . . f f f e e d d d f . . . 
-        . . . f 4 d d e 4 e f . . . 
-        . . . f e d d e 3 3 f . . . 
-        . . f f f e e f 6 6 f f . . 
-        . . f f f f f f f f f f . . 
-        . . . f f . . . f f f . . . 
+        . . . f 4 d d e e e e e . . 
+        . . . f e d d e 3 3 f e . . 
+        . . f f f e e e e e 1 e . . 
+        . . f f f f f e e 1 e e . . 
+        . . . f f . . e 1 e e e . . 
         `,img`
         . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . 
+        . f f f . f f f f f . . . . 
+        f f f f f c c c c f f . . . 
+        f f f f b c c c c c c f . . 
+        f f f c 3 c c c c c c f . . 
+        . f 3 3 c c c c c c c c f . 
+        . f f f c c c c c 4 c c f . 
+        . f f f f c c c 4 4 c f f . 
+        . f f 4 4 f b f 4 4 f f f . 
+        . . f 4 d 4 1 f d d f f . . 
+        . . f f f e e e e d f . . . 
+        . . . f 4 d d d d e e e e e 
+        . . . f e e e e e e f . . e 
+        . . f f f 6 6 6 6 e e e e 1 
+        . . f f f f f f f e e 1 1 e 
+        . . . f f . . . . e 1 e e e 
         `,img`
         . f f f . f f f f f . . . . 
         f f f f f c c c c f f . . . 
@@ -246,9 +246,26 @@ sprites.onOverlap(SpriteKind.RedHood, SpriteKind.BasketHood, function (sprite, o
         . . . f e e f 6 6 6 f . . . 
         . . . . f f f f f f . . . . 
         . . . . . f f f . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
         `],
-    1000,
-    true
+    3000,
+    false
     )
     animation.runImageAnimation(
     RedRidingHood,
@@ -280,12 +297,46 @@ sprites.onOverlap(SpriteKind.RedHood, SpriteKind.BasketHood, function (sprite, o
         . f f f e e e f f f f f f f . . 
         . f e e 4 4 f b e 4 4 e f f . . 
         . . f e d d f 1 4 d 4 e e f . . 
-        . . . f d d d e e e e e f . . . 
-        . . . f e 4 e d d 4 f . . . . . 
-        . . . f 2 2 e d d e f . . . . . 
-        . . f f 5 5 f e e f f f . . . . 
+        . . . f e e e e e e e e f . . . 
+        . . . f e d d d d 4 f . . . . . 
+        . . . f 2 d d d d e f . . . . . 
+        . . f f 5 e e e e f f f . . . . 
         . . f f f f f f f f f f . . . . 
         . . . f f f . . . f f . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . f f f f f f . . . . . . 
+        . . . f 2 f e e e e f f . . . . 
+        . . f 2 2 2 f e e e e f f . . . 
+        . . f e e e e f f e e e f . . . 
+        . f e 2 2 2 2 e e f f f f . . . 
+        . f 2 e f f f f 2 2 2 e f . . . 
+        . f f f e e e f f f f f f f . . 
+        . f e e 4 4 f b e 4 4 e f f . . 
+        . . f e d d f 1 4 d 4 e e f . . 
+        . . . f e e e e e e e e f . . . 
+        . . . f e d d d d 4 f . . . . . 
+        e e e e 1 d d d d e f . . . . . 
+        e . f f 1 e e e e f f f . . . . 
+        e 1 1 1 e f f f f f f f . . . . 
+        1 e e e e f . . . f f . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . f f f f f f . . . . . . 
+        . . . f 2 f e e e e f f . . . . 
+        . . f 2 2 2 f e e e e f f . . . 
+        . . f e e e e f f e e e f . . . 
+        . f e 2 2 2 2 e e f f f f . . . 
+        . f 2 e f f f f 2 2 2 e f . . . 
+        . f f f e e e f f f f f f f . . 
+        . f e e 4 4 f b e 4 4 e f f . . 
+        . . f e d d f 1 4 d 4 e e f . . 
+        . . . f d d d e e e e e f . . . 
+        . . e e e e e d d 4 f . . . . . 
+        . . e f 2 2 1 d d e f . . . . . 
+        . . e e 1 1 1 e e f f f . . . . 
+        . . e 1 e e e f f f f f . . . . 
+        . . 1 e e e e . . f f . . . . . 
         `,img`
         . . . . f f f f f f . . . . . . 
         . . . f 2 f e e e e f f . . . . 
@@ -298,33 +349,17 @@ sprites.onOverlap(SpriteKind.RedHood, SpriteKind.BasketHood, function (sprite, o
         . . f e d d f 1 4 d 4 e e f . . 
         . . . f d d d d 4 e e e f . . . 
         . . . f e 4 4 4 e e f f . . . . 
-        . . . f 2 2 2 e d d 4 . . . . . 
-        . . . f 2 2 2 e d d e . . . . . 
-        . . . f 5 5 4 f e e f . . . . . 
-        . . . . f f f f f f . . . . . . 
-        . . . . . . f f f . . . . . . . 
-        `,img`
-        . . . . . . . . . . . . . . . . 
-        . . . . f f f f f f . . . . . . 
-        . . . f 2 f e e e e f f . . . . 
-        . . f 2 2 2 f e e e e f f . . . 
-        . . f e e e e f f e e e f . . . 
-        . f e 2 2 2 2 e e f f f f . . . 
-        . f 2 e f f f f 2 2 2 e f . . . 
-        . f f f e e e f f f f f f f . . 
-        . f e e 4 4 f b e 4 4 e f f . . 
-        . . f e d d f 1 4 d 4 e e f . . 
-        . . . f d d d d 4 e e e f . . . 
-        . . . f e 4 4 4 e d d 4 . . . . 
-        . . . f 2 2 2 2 e d d e . . . . 
-        . . f f 5 5 4 4 f e e f . . . . 
-        . . f f f f f f f f f f . . . . 
-        . . . f f f . . . f f . . . . . 
+        . . e e e e e e d d 4 . . . . . 
+        . . e f 2 2 2 1 d d e . . . . . 
+        . . e e 1 1 1 e e e f . . . . . 
+        . . e 1 e e e e f f . . . . . . 
+        . . 1 e e e e e f . . . . . . . 
         `],
-    1000,
-    true
+    2000,
+    false
     )
     sprites.destroy(BasketPerson)
+    game.showLongText("Continue following the arrow!", DialogLayout.Bottom)
 })
 let name = ""
 let RedRidingHood: Sprite = null
