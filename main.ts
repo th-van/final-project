@@ -168,13 +168,163 @@ sprites.onOverlap(SpriteKind.RedHood, SpriteKind.BasketHood, function (sprite, o
     1000,
     true
     )
+    BasketPerson.sayText("Hey, wait!", 1000, true)
+    pause(1000)
     BasketPerson.sayText("Here's your basket", 1000, true)
     pause(1000)
     BasketPerson.sayText("It'll be useful", 1000, true)
     pause(2000)
     RedRidingHood.sayText("Thank you!", 2000, true)
     pause(2000)
-    sprites.destroy(Grandma)
+    animation.runImageAnimation(
+    RedRidingHood,
+    [img`
+        . . . . . . . . . . . . . . 
+        . f f f . f f f f f . . . . 
+        f f f f f c c c c f f . . . 
+        f f f f b c c c c c c f . . 
+        f f f c 3 c c c c c c f . . 
+        . f 3 3 c c c c c c c c f . 
+        . f f f c c c c c 4 c c f . 
+        . f f f f c c c 4 4 c f f . 
+        . f f 4 4 f b f 4 4 f f f . 
+        . f f 4 d 4 1 f d d c f . . 
+        . . f f f 4 d d d d f . . . 
+        . . 4 d d e 4 4 4 e f . . . 
+        . . e d d e 3 3 3 3 f . . . 
+        . . f e e f 6 6 6 6 f f . . 
+        . . f f f f f f f f f f . . 
+        . . . f f . . . f f f . . . 
+        `,img`
+        . . . . . . . . . . . . . . 
+        . f f f . f f f f f . . . . 
+        f f f f f c c c c f f . . . 
+        f f f f b c c c c c c f . . 
+        f f f c 3 c c c c c c f . . 
+        . f 3 3 c c c c c c c c f . 
+        . f f f c c c c c 4 c c f . 
+        . f f f f c c c 4 4 c f f . 
+        . f f 4 4 f b f 4 4 f f f . 
+        . . f 4 d 4 1 f d d f f . . 
+        . . f f f e e d d d f . . . 
+        . . . f 4 d d e 4 e f . . . 
+        . . . f e d d e 3 3 f . . . 
+        . . f f f e e f 6 6 f f . . 
+        . . f f f f f f f f f f . . 
+        . . . f f . . . f f f . . . 
+        `,img`
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . 
+        `,img`
+        . f f f . f f f f f . . . . 
+        f f f f f c c c c f f . . . 
+        f f f f b c c c c c c f . . 
+        f f f c 3 c c c c c c f . . 
+        . f 3 3 c c c c c c c c f . 
+        . f f f c c c c c 4 c c f . 
+        . f f f f c c c 4 4 e f f . 
+        . f f 4 4 f b f 4 4 e f f . 
+        . . f 4 d 4 1 f d d f f . . 
+        . . f f f 4 d d d d f . . . 
+        . . . f e e 4 4 4 e f . . . 
+        . . . 4 d d e 3 3 3 f . . . 
+        . . . e d d e 3 3 3 f . . . 
+        . . . f e e f 6 6 6 f . . . 
+        . . . . f f f f f f . . . . 
+        . . . . . f f f . . . . . . 
+        `],
+    1000,
+    true
+    )
+    animation.runImageAnimation(
+    RedRidingHood,
+    [img`
+        . . . . f f f f f f . . . . . . 
+        . . . f 2 f e e e e f f . . . . 
+        . . f 2 2 2 f e e e e f f . . . 
+        . . f e e e e f f e e e f . . . 
+        . f e 2 2 2 2 e e f f f f . . . 
+        . f 2 e f f f f 2 2 2 e f . . . 
+        . f f f e e e f f f f f f f . . 
+        . f e e 4 4 f b e 4 4 e f f . . 
+        . . f e d d f 1 4 d 4 e e f . . 
+        . . . f d d d d 4 e e e f . . . 
+        . . . f e 4 4 4 e e f f . . . . 
+        . . . f 2 2 2 e d d 4 . . . . . 
+        . . . f 2 2 2 e d d e . . . . . 
+        . . . f 5 5 4 f e e f . . . . . 
+        . . . . f f f f f f . . . . . . 
+        . . . . . . f f f . . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . f f f f f f . . . . . . 
+        . . . f 2 f e e e e f f . . . . 
+        . . f 2 2 2 f e e e e f f . . . 
+        . . f e e e e f f e e e f . . . 
+        . f e 2 2 2 2 e e f f f f . . . 
+        . f 2 e f f f f 2 2 2 e f . . . 
+        . f f f e e e f f f f f f f . . 
+        . f e e 4 4 f b e 4 4 e f f . . 
+        . . f e d d f 1 4 d 4 e e f . . 
+        . . . f d d d e e e e e f . . . 
+        . . . f e 4 e d d 4 f . . . . . 
+        . . . f 2 2 e d d e f . . . . . 
+        . . f f 5 5 f e e f f f . . . . 
+        . . f f f f f f f f f f . . . . 
+        . . . f f f . . . f f . . . . . 
+        `,img`
+        . . . . f f f f f f . . . . . . 
+        . . . f 2 f e e e e f f . . . . 
+        . . f 2 2 2 f e e e e f f . . . 
+        . . f e e e e f f e e e f . . . 
+        . f e 2 2 2 2 e e f f f f . . . 
+        . f 2 e f f f f 2 2 2 e f . . . 
+        . f f f e e e f f f f f f f . . 
+        . f e e 4 4 f b e 4 4 e f f . . 
+        . . f e d d f 1 4 d 4 e e f . . 
+        . . . f d d d d 4 e e e f . . . 
+        . . . f e 4 4 4 e e f f . . . . 
+        . . . f 2 2 2 e d d 4 . . . . . 
+        . . . f 2 2 2 e d d e . . . . . 
+        . . . f 5 5 4 f e e f . . . . . 
+        . . . . f f f f f f . . . . . . 
+        . . . . . . f f f . . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . f f f f f f . . . . . . 
+        . . . f 2 f e e e e f f . . . . 
+        . . f 2 2 2 f e e e e f f . . . 
+        . . f e e e e f f e e e f . . . 
+        . f e 2 2 2 2 e e f f f f . . . 
+        . f 2 e f f f f 2 2 2 e f . . . 
+        . f f f e e e f f f f f f f . . 
+        . f e e 4 4 f b e 4 4 e f f . . 
+        . . f e d d f 1 4 d 4 e e f . . 
+        . . . f d d d d 4 e e e f . . . 
+        . . . f e 4 4 4 e d d 4 . . . . 
+        . . . f 2 2 2 2 e d d e . . . . 
+        . . f f 5 5 4 4 f e e f . . . . 
+        . . f f f f f f f f f f . . . . 
+        . . . f f f . . . f f . . . . . 
+        `],
+    1000,
+    true
+    )
+    sprites.destroy(BasketPerson)
 })
 let name = ""
 let RedRidingHood: Sprite = null
@@ -195,9 +345,9 @@ BasketPerson = sprites.create(img`
     . . . f e e 4 4 4 e d 1 e e 
     . . . 4 d d e 3 3 d . . . e 
     . . . e d d e 3 3 e . . . e 
-    . . . f e e f 6 6 e e e e e 
-    . . . . f f f f f e e e e e 
-    . . . . . f f f . e e e e e 
+    . . . f e e f 6 6 e 1 e e e 
+    . . . . f f f f f e e 1 e e 
+    . . . . . f f f . e e e 1 1 
     `, SpriteKind.BasketHood)
 tiles.placeOnRandomTile(BasketPerson, sprites.dungeon.stairEast)
 Grandma = sprites.create(img`
